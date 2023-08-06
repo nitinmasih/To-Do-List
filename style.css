@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-color: #a4e097;
+  width: 100%;
+  max-width: 400px;
+  margin: 25px auto 20px;
+  height: 100%;
+  border-radius: 20px;
+  height: 400px;
+  position: relative;
+}
+.to-do {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.to-do h2 {
+  font-size: 30px;
+  margin-left: 10px;
+
+  font-weight: 600;
+}
+.to-do img {
+  width: 30px;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+.inputBox {
+  width: 320px;
+  align-items: center;
+  display: flex;
+  border-radius: 20px;
+  height: 60px;
+  justify-content: space-between;
+  margin-left: 30px;
+  border: 1px silver;
+  background-color: antiquewhite;
+  margin-top: 15px;
+}
+.inputBox input {
+  height: 65px;
+  width: 250px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  outline: none;
+  background: transparent;
+}
+.inputBox button {
+  width: 80px;
+  height: 60px;
+  border-radius: 15px;
+  background-color: #db6634;
+  color: #fff;
+}
+ul {
+  margin-left: 50px;
+  margin-top: 25px;
+  position: relative;
+}
+ul li {
+  margin: 17px 20px 18px;
+  list-style: none;
+  display: flex;
+  font-size: 25px;
+  cursor: pointer;
+
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  background: url(images/unchecked.png);
+  position: absolute;
+  width: 25px;
+  background-size: cover;
+  height: 25px;
+  left: -40px;
+  margin: 6px;
+}
+
+ul li span {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  height: 30px;
+
+  text-align: center;
+  line-height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+ul li.checked {
+  text-decoration: line-through;
+  color: #555;
+}
+ul li.checked::before {
+  background: url(images/checked.png);
+  background-position: center;
+  background-size: cover;
+}
+
+ul li span:hover{
+  background-color: #efcaca;
+}
